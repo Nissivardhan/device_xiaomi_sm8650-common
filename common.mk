@@ -264,6 +264,11 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigXiaomi \
     FrameworksResXiaomi \
+    FrameworksResHouji \
+    LineageSettingsOverlayHouji \
+    HoujiEuiccOverlay \
+    SettingsOverlayHouji \
+    SystemUIResHouji \
     NcmTetheringOverlay \
     SettingsResXiaomi \
     TelephonyResCommon \
