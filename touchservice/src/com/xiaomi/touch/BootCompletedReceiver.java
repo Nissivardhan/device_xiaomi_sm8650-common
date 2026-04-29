@@ -19,5 +19,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
 
         context.startServiceAsUser(new Intent(context, DoubleTapService.class), UserHandle.CURRENT);
+        context.startServiceAsUser(new Intent(context, SoFodTouchService.class), UserHandle.CURRENT);
     }
 }

@@ -28,5 +28,10 @@
             android:name=".DoubleTapService"
             android:exported="false"
             android:directBootAware="true" />
+
+        <service
+            android:name=".SoFodTouchService"
+            android:exported="false"
+            android:directBootAware="true" />
     </application>
 </manifest>
