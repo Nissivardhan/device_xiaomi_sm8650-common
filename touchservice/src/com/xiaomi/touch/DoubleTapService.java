@@ -14,7 +14,7 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 
-import vendor.xiaomi.hw.touchfeature.ITouchFeature;
+import vendor.xiaomi.hw.touchfeature.V1_0.ITouchFeature;
 
 public class DoubleTapService extends Service {
     private static final String TAG = "XiaomiTouchService";
