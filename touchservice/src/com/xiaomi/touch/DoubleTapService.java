@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.database.ContentObserver;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -57,10 +58,7 @@ public class DoubleTapService extends Service {
     private void updateTapToWakeStatus() {
         try {
             if (mTouchFeature == null) {
-                final String fqName = ITouchFeature.DESCRIPTOR + "/default";
-                final IBinder binder = android.os.Binder.allowBlocking(
-                        android.os.ServiceManager.waitForDeclaredService(fqName));
-                mTouchFeature = ITouchFeature.Stub.asInterface(binder);
+                mTouchFeature = ITouchFeature.getService();
             }
 
             if (mTouchFeature == null) {
@@ -70,7 +68,9 @@ public class DoubleTapService extends Service {
 
             final boolean enabled = Settings.Secure.getInt(
                     getContentResolver(), Settings.Secure.DOUBLE_TAP_TO_WAKE, 0) == 1;
-            mTouchFeature.setTouchMode(0, DOUBLE_TAP_TO_WAKE_MODE, enabled ? 1 : 0);
+            mTouchFeature.setModeValue(0, DOUBLE_TAP_TO_WAKE_MODE, enabled ? 1 : 0);
+        } catch (RemoteException e) {
+            Log.e(TAG, "TouchFeature HAL call failed", e);
         } catch (Exception e) {
             Log.e(TAG, "Failed to update DT2W", e);
         }
