@@ -1,0 +1,12 @@
+android_app {
+    name: "XiaomiTouchService",
+    certificate: "platform",
+    manifest: "AndroidManifest.xml",
+    srcs: ["src/**/*.java"],
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+    static_libs: [
+        "vendor.xiaomi.hw.touchfeature-V1-java",
+    ],
+}
