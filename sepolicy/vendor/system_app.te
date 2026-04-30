@@ -19,5 +19,10 @@ binder_call(system_app, vendor_hal_displayfeature_xiaomi_default)
 # Touchfeature (AIDL service)
 allow system_app hal_touchfeature_xiaomi_service:service_manager find;
 
+# Turbo Charging (XiaomiTurboCharging app)
+allow system_app vendor_sysfs_battery_supply:dir search;
+allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
+allow system_app self:netlink_kobject_uevent_socket { create read bind getopt setopt };
+
 # Thermal
 get_prop(system_app, vendor_thermal_normal_prop)
