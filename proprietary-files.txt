@@ -144,10 +144,6 @@ vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp_wsa883x.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_cdp.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd_sku2.xml
 vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_qrd.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_aim.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml
-vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml
 vendor/etc/batching.conf
 vendor/etc/card-defs.xml
 vendor/etc/kvh2xml.xml
@@ -749,7 +745,14 @@ vendor/lib64/libmm-hdcpmgr.so
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|194bbcc27ebad3952294fc3617b2a23db92e767a
 product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk|8eb57dcd535082ed41136383656d0c8b514b2213
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|01b74943dc0ae9353883298d36fba94128536c9e
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|375acb133095c92d7a411f1c46fae46637f4c5c6
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|86baa7f5ff304ca3dae863a6954ec6b285ff984c
+
+# Sound Trigger / DSP hotword config (PAL ResourceManager XMLs) - from OS3.0.302.0.WNCCNXM
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_aim.xml|c9832dc65f97ed15bcb4aae538922422322c284d
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_cdp.xml|bc0e9e58691625a74a11149d7c5baf1f68a59354
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_mtp.xml|be98cfb6d7c78dddcd97e7bf584af0ae484fe729
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd.xml|8d4bc934d7663f7b2cb393ae784421df7603cbb2
+vendor/etc/audio/sku_pineapple/resourcemanager_pineapple_qrd_sku2.xml|6d460029a413b84c73bbae964196bde66cad995c
 
 # Graphics
 vendor/app/com.qualcomm.qti.gpudrivers.pineapple.api34/com.qualcomm.qti.gpudrivers.pineapple.api34.apk
